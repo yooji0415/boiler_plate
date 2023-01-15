@@ -1,0 +1,13 @@
+{
+  "name": "boiler_plate",
+  "version": "0.0.1",
+  "description": "boiler plate for React with TypeScript",
+  "main": "src/index.tsx",
+  "repository": "https://github.com/yooji0415/boiler_plate.git",
+  "author": "yooji0415 <gch05406@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
