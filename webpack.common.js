@@ -1,14 +1,14 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.tsx"),
+  entry: path.resolve(__dirname, './src/index.tsx'),
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    extensions: ['.js', '.ts', '.tsx'],
   },
   output: {
-    path: path.resolve(__dirname, "./build"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, './build'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -17,28 +17,28 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
           },
         ],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
-        type: "asset/inline",
+        type: 'asset/inline',
       },
       {
         test: /\.svg$/,
-        type: "javascript/auto",
-        use: ["@svgr/webpack"] /* svg 파일을 리액트 컴포넌트처럼 사용 */,
+        type: 'javascript/auto',
+        use: ['@svgr/webpack'] /* svg 파일을 리액트 컴포넌트처럼 사용 */,
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./public/index.html"),
+      template: path.resolve(__dirname, './public/index.html'),
     }),
   ],
 };
